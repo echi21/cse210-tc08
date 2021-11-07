@@ -19,7 +19,7 @@ class DrawActorsAction(Action):
         self._output_service.clear_screen()
         
         for key in cast:
-            actor = cast[key]
-            self._output_service.draw_actors(actor)
+            actors = cast[key]
+            self._output_service.draw_actors(actors)
 
         self._output_service.flush_buffer()

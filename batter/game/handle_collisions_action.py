@@ -17,14 +17,14 @@ class HandleCollisionsAction(Action):
         """
         ball = cast["ball"][0]  # there's only one
         paddle = cast["paddle"][0]  # there's only one
-        #bricks = cast["brick"]
+        bricks = cast["brick"]
         # marquee.set_text("")
 
-        """for brick in bricks:
+        for brick in bricks:
             if ball.get_position().equals(brick.get_position()):
                 brick.set_text(" ")
-                position = Point(1, 1)
-                ball.set_position(position)"""
+                #position = Point(1, 1)
+                #ball.set_position(position)
 
         """for artifact in artifacts:
             if robot.get_position().equals(artifact.get_position()):
