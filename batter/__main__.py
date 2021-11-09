@@ -43,11 +43,11 @@ def main(screen):
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y - 2)
     position = Point(x, y)
-    velocity = Point(1, -1)
+    # velocity = Point(1, -1)
     ball = Actor()
     ball.set_text("O")
     ball.set_position(position)
-    ball.set_velocity(velocity)
+    # ball.set_velocity(velocity)
     cast["ball"] = [ball]
 ###################################################################################################################
     # create the script {key: tag, value: list}

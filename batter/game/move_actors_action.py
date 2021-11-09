@@ -42,7 +42,6 @@ class MoveActorsAction(Action):
         """Moves the given actor to its next position according to its
         velocity. Will wrap the position from one side of the screen to the
         other when it reaches the edge in either direction.
-
         Args:
             actor (Actor): The actor to move.
         """
@@ -54,29 +53,48 @@ class MoveActorsAction(Action):
         x2 = velocity.get_x()
         y2 = velocity.get_y()
 
-        x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
-        y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
+        x = x1 + x2
+        y = y1 + y2
+
+        if x >= 68:
+            x = 68
+
+        elif x <= 1:
+            x = 1
 
         position = Point(x, y)
         actor.set_position(position)
 
     def move_ball(self, actor):
+
+
+
         position = actor.get_position()
         velocity = actor.get_velocity()
 
-        x1 = position.get_x()
-        y1 = position.get_y()
-        x2 = velocity.get_x()
-        y2 = velocity.get_y()
+        x1 = position.get_x()  # 36
+        y1 = position.get_y()  # 19
+        x2 = velocity.get_x()  # 1
+        y2 = velocity.get_y()  # -1
 
-        if x1 > 80 - 2 or x1 < 2:
+        if x1 > 78 or x1 < 2:
             x2 = -x2
 
-        if y1 > 20 - 2 or y1 < 2:
+        # if y1 > 20 - 2 or y1 < 2:
+        y_max = 18
+        y_min = 2
+
+        if y1 < y_min or y1 > y_max:
             y2 = -y2
+            y_min = -y_min
+            y_max = -y_max
+
 
         x1 += x2
         y1 += y2
+
+        # x = x1 + x2
+        # y = y1 + y2
 
         position = Point(x1, y1)
         actor.set_position(position)
