@@ -11,7 +11,6 @@ class Point:
 
     def __init__(self, x, y):
         """The class constructor.
-        
         Args:
             x (integer): A horizontal distance.
             y (integer): A vertical distance.
@@ -21,10 +20,8 @@ class Point:
 
     def add(self, other):
         """Gets a new point that is the sum of this and the given one.
-
         Args:
             other (Point): The Point to add.
-
         Returns:
             Point: A new Point that is the sum.
         """
@@ -34,10 +31,8 @@ class Point:
 
     def equals(self, other):
         """Whether or not this Point is equal to the given one.
-
         Args:
             other (Point): The Point to compare.
-
         Returns: 
             boolean: True if both x and y are equal; false if otherwise.
         """
@@ -61,7 +56,6 @@ class Point:
 
     def is_zero(self):
         """Whether or not the point is zero or x = 0 and y = 0.
-        
         Returns:
             boolean: True if x = 0 and y = 0; false if otherwise.
         """
@@ -69,7 +63,6 @@ class Point:
 
     def reverse(self):
         """Gets a new Point that is the reverse of this one.
-        
         Returns:
             Point: A new Point that is reversed.
         """

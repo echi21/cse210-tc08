@@ -29,7 +29,7 @@ def main(screen):
 ###################################################################################################################
     # Bricks creation
     cast["brick"] = []
-    for x in range(5, 75):
+    for x in range(4, 76):
         for y in range(2, 6):
             position = Point(x, y)
             brick = Actor()
@@ -38,16 +38,14 @@ def main(screen):
             cast["brick"].append(brick)
 ###################################################################################################################
     # Ball creation
-    # x = int(constants.MAX_X / 2)
-    # y = int(constants.MAX_Y / 2)
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y - 2)
     position = Point(x, y)
-    # velocity = Point(1, -1)
+    velocity = Point(1, -1)
     ball = Actor()
     ball.set_text("O")
     ball.set_position(position)
-    # ball.set_velocity(velocity)
+    ball.set_velocity(velocity)
     cast["ball"] = [ball]
 ###################################################################################################################
     # create the script {key: tag, value: list}
